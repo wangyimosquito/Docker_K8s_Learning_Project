@@ -8,8 +8,10 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 80
+ENV PORT 80
 
-VOLUME [ "/app/feedback" ]
+EXPOSE $PORT
+
+# VOLUME [ "/app/feedback" ]
 
 CMD [ "node", "server.js" ]
